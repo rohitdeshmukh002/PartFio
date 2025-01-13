@@ -1,0 +1,102 @@
+<div class="header">
+    <nav class="navbar" style="font-size: 1.5rem;color: black; font-family: Arial, Helvetica, sans-serif;">
+      <!-- Logo -->
+      <a href="#" class="logo">
+        <img src="../../assets/logo.png" alt="logo"/>
+      </a>
+  
+      <!-- Navigation Menu -->
+      <ul [ngClass]="{ 'active': menuOpen }" class="nav-menu ">
+        <li>
+          <a href="#" (click)="toggleDropdown('solutions')">
+            Solutions <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+          </a>
+          <div class="dropdown" *ngIf="dropdownOpen === 'solutions'">
+            <a href="#">Solution 1</a>
+            <a href="#">Solution 2</a>
+            <a href="#">Solution 3</a>
+          </div>
+        </li>
+        <li>
+          <a href="#" (click)="toggleDropdown('features')">
+            Features <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+          </a>
+          <div class="dropdown" *ngIf="dropdownOpen === 'features'">
+            <a href="#">Feature 1</a>
+            <a href="#">Feature 2</a>
+            <a href="#">Feature 3</a>
+          </div>
+        </li>
+        <li>
+          <a href="#" (click)="toggleDropdown('partnership')">
+            Partnership <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+          </a>
+          <div class="dropdown" *ngIf="dropdownOpen === 'partnership'">
+            <a href="#">Partner 1</a>
+            <a href="#">Partner 2</a>
+            <a href="#">Partner 3</a>
+          </div>
+        </li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#"><i style="font-size: 24px" class="fas">&#xf002;</i></a></li> 
+        
+        <li class="contact"><a href="#" style="color: white;">Contact Us</a></li>
+      </ul>
+  
+      <!-- Hamburger Menu -->
+      <div class="menu-toggle" *ngIf="!menuOpen" (click)="toggleMenu()">
+        &#9776; <!-- Hamburger Icon -->
+      </div>
+  
+      <!-- Close Button -->
+      <div class="close-btn" *ngIf="menuOpen" (click)="toggleMenu()">
+        &#x2715; <!-- Close Icon -->
+      </div>
+    </nav>
+
+
+    <div class="main-container">
+          
+    
+          <div class="content-wrapper"> 
+              <div class="container-head">
+                <h1>
+                  App Development <br>platform, <span id="dynamic-text" [@dynamicTextAnimation]>{{ dynamicText }}</span>
+                </h1>
+              </div>
+            
+            
+              <div class="para">
+                <p>
+                Platfio is a no code / low code <span>App Development platform used by agencies or users</span> to unlock app development possibilities for business. Want a Financial App, Clinic App, Gym App, Hospitality App, Accounting App or Broker App? Start with a template or use our wizard. Platfio App Development supports most business industries, ensuring your custom mobile app development is delivered within budget and is <span>user-friendly to maintain</span> with our unique<span> Manager and Editor tools, FREE with every App.</span>
+                 </p>
+                 <p>
+                 Platfio is a no code Native App Development platform used by <span>Agencies and Users.</span> Start your Clinic App, Gym App, Hospitality App, Accounting App or Broker App with a template or use <span>our App Wizard for other Apps.</span> Platfio App Development ensures your mobile app development is delivered within<span> budget and is user-friendly to maintain with our unique Manager and Editor tools</span> that come FREE with every App.
+                 </p>
+              </div>
+      
+    
+              <div class="Button">
+                   <div class="book-meeting">Book Meeting</div>
+                   <div class="case-studies">Case Studies</div>
+                   <div class="call">Call 03 9002 0902</div>
+              </div>
+    
+             <div class="bottom">
+                 <p class="para1">
+                 <i>*October 2024: 97% of Platfio App Projects are Launched to the App Stores within 4 Weeks!</i>
+                 </p>
+            </div>
+          </div>
+          <div class="image-container">
+              <img src="../../assets/mobile.png" alt="phone">
+          </div>
+       </div>
+  </div>
+   
+    
+
+ 
+
+   
+  

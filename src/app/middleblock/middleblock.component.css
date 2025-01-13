@@ -1,0 +1,154 @@
+/* General Styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+/* Header Section */
+.header-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header-section h1 {
+  font-size: 44px;
+  color: #120644;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+  /* white-space: nowrap; */
+}
+
+.header-section .subtitle {
+  font-size: 18px;
+  color: #8c34ea;
+  font-weight: bold;
+}
+
+/* Cards Container */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Card Styling */
+.card {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.card-header img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.card-header span {
+  font-size: 16px;
+  color: #888;
+}
+
+.card h3 {
+  font-size: 20px;
+  color: #120644;
+  margin: 10px 0;
+}
+
+.card p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cards-container {
+      grid-template-columns: 1fr;
+      gap: 15px;
+  }
+
+  .header-section h1 {
+      font-size: 30px;
+  }
+
+  .header-section .subtitle {
+      font-size: 16px;
+  }
+
+  .card {
+      text-align: center;
+  }
+
+  .card-header {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .card-header img {
+      margin-bottom: 10px;
+  }
+
+  .card-header .timestamp {
+      margin-top: 5px;
+      display: block;
+  }
+
+  .card h3 {
+      font-size: 18px;
+  }
+
+  .card p {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-section h1 {
+      font-size: 28px;
+  }
+
+  .card {
+      padding: 15px;
+  }
+
+  .card-header img {
+      width: 30px;
+      height: 30px;
+  }
+
+  .card h3 {
+      font-size: 16px;
+  }
+
+  .card p {
+      font-size: 12px;
+  }
+}

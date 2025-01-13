@@ -1,0 +1,65 @@
+<div class="faq-container">
+    <!-- FAQ Section -->
+    <div class="faq-section">
+      <p class="subtitle">Questions About Our App Development? Check Here First!</p>
+      <h1 class="main-title">Frequently Asked Questions</h1>
+      <div class="faq-list">
+        <div class="faq-item" *ngFor="let faq of faqs; let i = index">
+          <div class="faq-question" (click)="toggleFaq(i)">
+            {{ faq.question }}
+            <span class="faq-symbol">{{ faq.isOpen ? '-' : '+' }}</span>
+          </div>
+          <div class="faq-answer" *ngIf="faq.isOpen">
+            <p>Here is the answer for "{{ faq.question }}". Making it easy for anyone to maintain and update their app was one of the driving forces behind Platfio’s unique <b>Manager and Editor tools, FREE with every App</b> creation. You don’t need any technical expertise or special training to use Platfio App Development; it’s designed to be intuitive and user-friendly. </p>
+            <p>With Platfio App Development, you have complete control over your app’s development and content. You can make changes and updates quickly and easily without relying on a software engineer. Platfio App Development also takes care of all the technical aspects of app maintenance, including hosting, bug fixes, upgrades, and enhancements, all included in the standard subscription pricing at no extra cost.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <h2 class="form-title">Have Any Questions?</h2>
+      <p class="form-description">
+        Our Melbourne-based app development team is available to answer any question you may have.
+      </p>
+      <form (ngSubmit)="submitForm()">
+        <input
+          type="text"
+          [(ngModel)]="form.firstName"
+          name="firstName"
+          placeholder="First Name"
+          required
+        />
+        <input
+          type="text"
+          [(ngModel)]="form.lastName"
+          name="lastName"
+          placeholder="Last Name"
+          required
+        />
+        <input
+          type="tel"
+          [(ngModel)]="form.phone"
+          name="phone"
+          placeholder="Phone"
+          required
+        />
+        <input
+          type="email"
+          [(ngModel)]="form.email"
+          name="email"
+          placeholder="Email"
+          required
+        />
+        <textarea
+          [(ngModel)]="form.details"
+          name="details"
+          placeholder="Your Enquiry & Details"
+          required
+        ></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+  

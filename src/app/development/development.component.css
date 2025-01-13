@@ -1,0 +1,124 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Section Container Styling */
+.section-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: space-between;
+  gap: 20px; /* Space between boxes */
+  padding: 0px 120px 70px 120px;
+  margin: 0px 100px 0px 100px;
+}
+
+/* General Box Styling */
+.section-container .box {
+  position: relative;
+  flex:  1 1 calc(33.33% - 20px); /* Three boxes in one row with a gap */
+  width: 100%;
+  /* height: 718px; Set height */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column; /* Align children in a column */
+  justify-content: space-between;
+  border-radius: 2rem;
+  overflow: hidden;
+  padding: 40px 40px 40px 40px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Background Images for Boxes */
+.section-container .box:nth-child(1) {
+  background-image: url('https://www.platfio.com/wp-content/uploads/2024/01/1-1.webp');
+}
+
+.section-container .box:nth-child(2) {
+  background-image: url('https://www.platfio.com/wp-content/uploads/2024/01/2-1.webp');
+}
+
+.section-container .box:nth-child(3) {
+  background-image: url('https://www.platfio.com/wp-content/uploads/2024/01/4-1.webp');
+}
+
+/* Overlay for Better Readability */
+
+
+/* Content Styling */
+.section-container .box .heading h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-family:  Helvetica, sans-serif;
+}
+
+.section-container .box .para p {
+  font-size: 16px;
+  display: block;
+  line-height: 1.3rem;
+  margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #b7b4c7;
+}
+
+.section-container .box .text-button button {
+  padding: 10px 30px;
+  font-size: 1rem;
+  background-color: #120644;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  border: 1.5px solid #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: dm-sans, sans-serif;
+  margin-bottom: 20px;
+}
+
+.section-container .box .text-button button:hover {
+  background-color: #00d5ff;
+}
+
+/* Image Below Button */
+.below-button-img {
+  display: flex;
+  justify-content: center; 
+  margin-bottom: -40px;
+}
+
+.below-button-img img {
+  width: 250px;
+  height: auto;
+  display: block;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .section-container {
+    padding: 0px 20px 70px 20px;
+    margin: 0;
+  }
+  .section-container .box {
+    flex: 1 1 calc(50% - 20px); /* Two boxes per row */
+    height: 400px; /* Adjust height */
+  }
+}
+
+@media (max-width: 768px) {
+  .section-container .box {
+    flex: 1 1 100%; /* One box per row */
+    height: 734px; /* Adjust height */
+
+    .below-button-img img {
+      width: 250px;
+      height: auto;
+      display: block;
+      padding-left: 40px;
+    }
+  }
+}

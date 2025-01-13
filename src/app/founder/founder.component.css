@@ -1,0 +1,220 @@
+/* General Styling */
+.testimonials-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: white;
+  margin-top: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.testimonials-section .subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+.testimonials-section .main-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #120644;
+  margin-bottom: 40px;
+}
+
+/* Testimonials Slider */
+.testimonials-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-wrap: nowrap; */
+  gap: 30px;
+  flex-direction: column; /* Default to column for smaller screens */
+}
+
+.testimonial {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  width: 80%;
+  max-width: 400px;
+}
+
+.testimonial.active {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.testimonial .company-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #120644;
+}
+
+.testimonial .testimonial-quote {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.testimonial .owner-label {
+  font-size: 14px;
+  color: #888;
+}
+
+.testimonial .owner-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 5px;
+}
+
+.testimonial-image {
+  margin-top: 20px;
+  position: relative;
+}
+
+.testimonial-image .profile-image {
+  border: 2px solid #888;
+  width: 455px;
+  height: 455px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.testimonial-image .profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Testimonials Pagination */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pagination .dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination .dot.active {
+  background-color: #8c34ea;
+}
+
+/* Carousel Container */
+.carousel-container {
+  margin-top: 40px;
+  position: relative;
+  text-align: center;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Allow images to wrap for smaller screens */
+}
+
+.carousel-item img {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.carousel-pagination .dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-pagination .dot.active {
+  background-color: #8c34ea;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .testimonials-container {
+    flex-direction: column; /* Stack testimonials vertically */
+  }
+
+  .testimonials-section .main-title {
+    font-size: 28px;
+  }
+
+  .testimonial .company-name {
+    font-size: 18px;
+  }
+
+  .testimonial .testimonial-quote {
+    font-size: 14px;
+  }
+
+  .testimonial .owner-name {
+    font-size: 14px;
+  }
+
+  .testimonial-image .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .carousel-item img {
+    width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials-section .main-title {
+    font-size: 24px;
+  }
+
+  .testimonial .company-name {
+    font-size: 16px;
+  }
+
+  .testimonial .testimonial-quote {
+    font-size: 12px;
+  }
+
+  .testimonial .owner-name {
+    font-size: 12px;
+  }
+
+  .testimonial-image .profile-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .carousel-item img {
+    width: 100px;
+  }
+}
